@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package conventer;
 
 import java.io.File;
@@ -12,14 +8,9 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
- * @author Dmitriy
+ * @author Dmitry
  */
 public class Conventer {
-
-    /**
-     * @param args the command line arguments
-     */
     
     public List<String> examples;
     private final Graph graph;
@@ -72,6 +63,12 @@ public class Conventer {
         return str.toString();
     }
     
-   
+    public void run(String filename) throws FileNotFoundException
+    {
+        input(filename);
+        for (String example: examples) {
+            System.out.println(parse(example));
+        }
+    }
     
 }
